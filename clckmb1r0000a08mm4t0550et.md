@@ -1,17 +1,12 @@
 # Configurar Proyecto React con Create react app
 
-````typescript
-El un tutorial anterior he el proceso para **configurar una aplicación react, desde cero**. En esta ocasión utilizaremos [create react app](https://facebook.github.io/create-react-app/), una herramienta creada por los desarrolladores de react para facilitar el proceso de configuración inicial.
+El un tutorial anterior he el proceso para **configurar una aplicación react, desde cero**. En esta ocación utilizaremos [create react app](https://facebook.github.io/create-react-app/), una herramienta creada por los desarrolladores de react para facilitar el proceso de configuración inicial.
 
 Para generar un proyecto con **create react app** podemos utilizar npm, instalando la herramienta de forma global en nuestro sistema. (actualmente no recomendado)
 
 ## Generar aplicación con create react app y npx
 
-Para generar nuestra aplicación con `npx`ejecutamos el siguiente comando.
-
-```bash
-npx create-react-app create-react-app-tutorial
-```
+Para generar nuestra aplicación con `npx`ejecutamos el siguiente comando. `bash npx create-react-app create-react-app-tutorial`
 
 Con esto ya generamos nuestra aplicación, lista para empezar a trabajar sin tener que configurar **webpack o babel** como lo hemos hecho en [el tutorial anterior](https://www.gpolanco.com/configurar-react-desde-cero-con-webpack-y-babel/), sólo te centras en el código de tus componentes para aplicación.
 
@@ -41,20 +36,27 @@ Tenemos dos directorios y el archivo `package.json` en el root de la aplicación
 
 Podemos eliminar o renombrar cualquiera de los archivos generados, excepto estos.
 
-- **public/index.html** Es la plantilla utilizada para mostrar nuestros componentes.
-- **src/index.js** Es el punto de entrada para webpack.
-- **package.json** archivo de configuración de npm.
+* **public/index.html** Es la plantilla unatilizada para renderizar nuestros componentes.
+    
+* **src/index.js** Es el punto de entrada para webpack.
+    
+* **package.json** archivo de configuración de npm.
+    
 
 Todo el código de nuestra aplicación debe estar ubicado en `src`, ya que, **es el directorio procesado por webpack**, np quiere decir que no puedes crear archivos fuera de este directorio, sólo que, webpack no procesará los archivos fuera de `src`.
 
-## Reestructurar nuestro directorio SRC
+## Reestrucurar nuestro directorio SRC
 
 He modificado los siguientes puntos en la aplicación generada originalmente.
 
-- Utilizaremos la extensión `.jsx` en vez de `.js` para los componentes.
-- He creado el directorio `components` donde alojaremos todos los componentes de la aplicación.
-- He creado el directorio `assets` donde guardaremos las imágenes y css no específicos de algún componente.
-- Por ahora no utilizaremos test, con lo cual he eliminado los archivos `.test.js`
+* Utilizaremos la extensión `.jsx` en vez de `.js` para los componentes.
+    
+* He creado el directorio `components` donde alojaremos todos los componentes de la aplicación.
+    
+* He creado el directorio `assets` donde guardaremos las imágenes y css no específicos de algún componente.
+    
+* Por ahora no utilizaremos test, con lo cual he eliminado los archivos `.test.js`
+    
 
 Así queda el directorio `src` actualmente.
 
@@ -75,7 +77,7 @@ src
 
 ## Configurar SCSS
 
-Create react app soporta de forma predeterminada el pre-procesado de `scss`, sólo tenemos que instalar en nuestras dependencias de desarrollo el paquete `node-sass`
+Creacte react app soporta de forma predeterminada el pre-procesado de `scss`, sólo tenemos que instalar en nuestras dependencias de desarrollo el paquete `node-sass`
 
 ```bash
 npm install node-sass --save-dev
@@ -87,7 +89,7 @@ Podemos renombrar el directorio `css` por `scss`. En este directorios crearemos 
 
 Ahora así queda nuestro directorio `src`
 
-```
+```typescript
  src
    ├── assets
    |  ├── img
@@ -133,7 +135,7 @@ Ahora con esta configuración podemos importar nuestros archivos `.scss` como si
 SASS_PATH=./src/assets/:node_modules
 ```
 
-Ahora ya podemos importar archivos `.scss`desde el directorio node_modules utilizando `~`antes del directorio.
+Ahora ya podemos importar archivos `.scss`desde el directorio node\_modules utilizando `~`antes del directorio.
 
 ```scss
 // Import Bootstrap and its default variables
@@ -151,4 +153,3 @@ Este es un punto de partida para una aplicación reac, en el camino te encontrar
 En próximos tutoriales seguiremos avanzando utilizando un proyecto real.
 
 Puedes descargar el proyecto desde el [Repositorio en github](https://github.com/gpolanco/Configurar-Proyecto-React-con-Create-react-app)
-````
